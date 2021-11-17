@@ -1,5 +1,8 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-/* https://angular.io/guide/observables-in-angular */
+/* 
+https://angular.io/api/core/EventEmitter 
+https://angular.io/guide/event-binding#custom-events-with-eventemitter
+*/
 
 @Component({
   selector: 'app-event-emitter',

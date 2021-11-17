@@ -1,6 +1,8 @@
 <h1>{{ title | uppercase }}</h1>
 <!-- <app-observer></app-observer> -->
 <app-observer (open)="onOpen($event)" (close)="onClose($event)"></app-observer>
-<app-observer (open)="onOpen($event)" (close)="onClose($event)"></app-observer>
+<app-asyncpipe></app-asyncpipe>
 <app-event-emitter (open)="onOpen($event)" (close)="onClose($event)"></app-event-emitter>
+<hr>
+<p><b>Subscribe using observer:</b> On the root is an example of creating and subscribing to a simple observable, with an observer that logs the received message to the console.</p>
 

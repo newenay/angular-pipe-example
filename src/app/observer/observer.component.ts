@@ -1,4 +1,4 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 /* https://angular.io/guide/observables-in-angular */
 
 @Component({
@@ -8,9 +8,9 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class ObserverComponent implements OnInit {
 
-  constructor() { }
+  constructor( ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
   }
 
   doSomething() {
