@@ -1,8 +1,11 @@
 <div class="card">
-    <h2>Event Emitter</h2>
-    <!-- target event name -- component function -->
-    <button (click)="toggle()">Toggle</button>
+    <div>
+        <h2>Event Emitter</h2>
+        <!-- target event name -- component function -->
+        <button (click)="toggle()">Toggle</button>
+    </div>
     <div [hidden]="!visible">
-        <ng-content></ng-content>
+        <!-- <ng-content></ng-content> -->
+        <button>Content</button>
     </div>
 </div>

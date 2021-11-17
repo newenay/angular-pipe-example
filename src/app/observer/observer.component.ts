@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-/* https://angular.io/guide/observables-in-angular */
+// import { Observable, Observer } from 'rxjs';
+/* https://angular.io/guide/observables */
 
 @Component({
   selector: 'app-observer',
@@ -8,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ObserverComponent implements OnInit {
 
-  constructor( ) { }
+  constructor() {
+  }
 
   ngOnInit(): void { 
+    
   }
 
   doSomething() {
