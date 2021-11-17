@@ -3,8 +3,8 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
   
-h2 {
-    margin:0
+h1, h2, h3, h4, h4, h6 {
+    margin:10px;
 }
  
 /* https://www.w3schools.com/howto/howto_css_cards.asp */

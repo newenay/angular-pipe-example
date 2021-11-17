@@ -1,23 +1,31 @@
-import { Component, OnInit } from '@angular/core';
-// import { Observable, Observer } from 'rxjs';
-/* https://angular.io/guide/observables */
+import { Component } from '@angular/core';
+import { MessageService } from '../_services';
+/* 
+https://stackblitz.com/edit/angular-10-communicating-between-components?file=src%2Fapp%2Fapp-routing.module.ts
+https://angular.io/guide/observables 
+*/
 
 @Component({
   selector: 'app-observer',
   templateUrl: './observer.component.html',
   styleUrls: ['./observer.component.css']
 })
-export class ObserverComponent implements OnInit {
+export class ObserverComponent {
 
-  constructor() {
+  constructor(private messageService: MessageService) { }
+
+  sendMessage(): void {
+      // send message to subscribers via observable subject
+      this.messageService.sendMessage('Message from Home Component to App Component!');
   }
 
-  ngOnInit(): void { 
-    
+  clearMessages(): void {
+      // clear messages
+      this.messageService.clearMessages();
   }
-
-  doSomething() {
+  
+  /* doSomething() {
     console.log("we will do something!")
-  }
+  } */
 
 }

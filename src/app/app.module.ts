@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { ObserverComponent } from './observer/observer.component';
 import { EventEmitterComponent } from './event-emitter/event-emitter.component';
 import { AsyncpipeComponent } from './asyncpipe/asyncpipe.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AsyncpipeComponent } from './asyncpipe/asyncpipe.component';
     AsyncpipeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
