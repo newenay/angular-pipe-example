@@ -14,7 +14,10 @@ export class PromiseComponent implements OnInit {
   constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void {
-    console.log("Angular 10 Promises");
+    //console.log("Angular 10 Promises");
+  }
+
+  doSomething() {
     this.fetchDataAsPromise()
       .then((data) => {
         console.log(JSON.stringify(data));

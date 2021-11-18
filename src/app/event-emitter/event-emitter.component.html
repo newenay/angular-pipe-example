@@ -1,11 +1,12 @@
 <div class="card">
     <div>
         <h4>Event Emitter</h4>
+        <p>Event functions are on app-root (global)</p>
         <!-- target event name -- component function -->
         <button (click)="toggle()" class="btn btn-primary mr-2">Toggle</button>
     </div>
     <div [hidden]="!visible">
         <!-- <ng-content></ng-content> -->
-        <h6>Hide Text</h6>
+        <h6>[Hide Content]</h6>
     </div>
 </div>
