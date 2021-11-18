@@ -4,11 +4,10 @@
 <div class="container text-center my-3">
     <!-- <app-observer (open)="onOpen($event)" (close)="onClose($event)"></app-observer> -->
     <router-outlet></router-outlet>
+    <app-promise></app-promise>
     <app-asyncpipe></app-asyncpipe>
     <app-event-emitter (open)="onOpen($event)" (close)="onClose($event)"></app-event-emitter>
     <div *ngFor="let message of messages" class="alert alert-sm alert-info">{{message.text}}</div>
+    <h4><a href="https://www.maestralsolutions.com/angular-application-state-management-you-do-not-need-external-data-stores/" target="_blank">Link to great Article about Angular State</a></h4>
 </div>
 
-<p><b>Subscribe using observer:</b> On the root is an example 
-    of creating and subscribing to a simple observable, with 
-    an observer that logs the received message to the console.</p>

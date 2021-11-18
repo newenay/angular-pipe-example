@@ -6,17 +6,22 @@ import { ObserverComponent } from './observer/observer.component';
 import { EventEmitterComponent } from './event-emitter/event-emitter.component';
 import { AsyncpipeComponent } from './asyncpipe/asyncpipe.component';
 import { AppRoutingModule } from './app-routing.module';
+import { PromiseComponent } from './promise/promise.component';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ObserverComponent,
     EventEmitterComponent,
-    AsyncpipeComponent
+    AsyncpipeComponent,
+    PromiseComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

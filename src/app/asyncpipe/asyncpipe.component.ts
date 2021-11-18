@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   styleUrls: ['./asyncpipe.component.css']
 })
 export class AsyncpipeComponent implements OnInit {
-
+  // utcTime = new Date.UTC()
   time = new Observable<string>(observer => {
     setInterval(() => observer.next(new Date().toString()), 1000);
   });
@@ -16,10 +16,6 @@ export class AsyncpipeComponent implements OnInit {
   constructor( ) { }
 
   ngOnInit(): void { 
-  }
-
-  doSomething() {
-    console.log("we will do something!")
   }
 
 }

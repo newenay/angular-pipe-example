@@ -16,7 +16,7 @@ export class ObserverComponent {
 
   sendMessage(): void {
       // send message to subscribers via observable subject
-      this.messageService.sendMessage('Message from Home Component to App Component!');
+      this.messageService.sendMessage('Msg from Observer Component to App !');
   }
 
   clearMessages(): void {
