@@ -1,11 +1,11 @@
 <div class="card">
     <h4>Pipe (Async)</h4>
     <div>
-        <code>observable|async</code>:
-        Time: {{ time | async }}
+        <code>Simple Clock -</code>
+        Time: {{ time | date: 'hh:mm:ss a' }}
     </div>
     <div>
-        <code>observable|async</code>: 
-        Zulu Time: {{ zulu | async }}
+        <code>RxJS Clock -</code> 
+        Zulu: {{ rxTime | date: 'hh:mm:ss a' }}
     </div>
 </div>
