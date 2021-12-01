@@ -11,7 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 // How is this a 'Shared_Module' exactly?
 
 // Supposedly it must still be imported by the child so that it will work on the grandchild??
-import { ZuluDateTimePipePublicModule } from './shared/zulu-date-time-pipe/zulu-date-time-pipe-public.module';
+// import { ZuluDateTimePipePublicModule } from './shared/zulu-date-time-pipe/zulu-date-time-pipe-public.module';
 
 
 @NgModule({
@@ -26,7 +26,7 @@ import { ZuluDateTimePipePublicModule } from './shared/zulu-date-time-pipe/zulu-
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ZuluDateTimePipePublicModule
+    //ZuluDateTimePipePublicModule
   ],
   providers: [],
   bootstrap: [AppComponent]

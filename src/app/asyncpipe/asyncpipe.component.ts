@@ -16,8 +16,9 @@ https://stackblitz.com/edit/angular-ihpcnz
 })
 export class AsyncpipeComponent implements OnInit {
   /* https://stackoverflow.com/questions/948532/how-do-you-convert-a-javascript-date-to-utc/11957822#11957822 */
-  time = new Date().toISOString();
-  rxTime = new Date().toISOString();
+  
+  time = new Date().toUTCString(); 
+  rxTime = new Date().toUTCString();
   intervalId: any;
   unsubscribe$ = new Subject<void>();
   subscription: Subscription[] = [];
@@ -28,7 +29,7 @@ export class AsyncpipeComponent implements OnInit {
 
     // Using Basic Interval
     this.intervalId = setInterval(() => {
-      this.time = new Date().toISOString();
+      this.time = new Date().toUTCString();
     }, 1000);
 
     // Using RxJS Timer
@@ -38,7 +39,8 @@ export class AsyncpipeComponent implements OnInit {
         share()
       )
       .subscribe(time => {
-        this.rxTime = time.toISOString();
+        this.rxTime = time.toUTCString();
+        // new Date(this.now.getTime() - this.now.getTimezoneOffset() * 60000).toISOString();
       })
     );
   }
