@@ -26,7 +26,6 @@ export class AsyncpipeComponent implements OnInit {
   constructor( ) { }
 
   ngOnInit(): void { 
-
     // Using Basic Interval
     this.intervalId = setInterval(() => {
       this.time = new Date().toUTCString();

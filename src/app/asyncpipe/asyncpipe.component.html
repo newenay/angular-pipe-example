@@ -2,10 +2,10 @@
     <h4>Pipe (Async)</h4>
     <div>
         <code>Simple Clock -</code>
-        Time: {{ time | date: 'HH:mm:ss' : 'Z' }}Z
+        Time: {{ time | date: 'HH' : '+0000' }}<span class="timeColon">:</span>{{ time | date: 'mm' : '+0000' }}Z
     </div>
     <div>
         <code>RxJS Clock -</code> 
-        Zulu: {{ rxTime | date: 'HH:mm:ss' : 'z' }}Z
+        Zulu: {{ rxTime | date: 'HH:mm:ss' : 'GMT' }}Z
     </div>
 </div>
