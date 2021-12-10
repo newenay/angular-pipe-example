@@ -1,16 +1,23 @@
-@media (min-width: 768px) {
+/*@media (min-width: 768px) {
   .modal.xl {
     width: 90%;
     max-width:1200px;
-    /* background: purple; */
+     background: purple; 
   }
+}*/
+
+.modal .modal-dialog {
+  width: 90vh !important;
 }
 
+
 /* New */
-.modal-view{
+.modal-view {
   position:relative;
-  /* width:inherit; */
-  width: 800px;
-  height: 45vh !important;
+  width:inherit;
+  /* max-width: 1490px !important;
+  min-width: 971px !important;   
+  width: 95% !important; */
+  height: 85vh !important;
   background-color: rgba(17, 0, 252, 0.5);
 }

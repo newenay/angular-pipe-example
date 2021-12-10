@@ -6,7 +6,8 @@
         </p>
 
         <ng-template #emailComponent>
-            <app-email name="{{ name }}" class="modal-view">
+            <!-- Add class="modal-dialog to app-email gives a vertical stretch, but not width -->
+            <app-email name="{{ name }}" modalRef="{{ modalRef }}" class="modal-dialog modal-view">
             </app-email>
         </ng-template>
 
