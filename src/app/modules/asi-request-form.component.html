@@ -135,10 +135,9 @@
   </tabset>
 </form>
 
-<ng-template #emailComponent>
+<ng-template #emailComponent class="modal-dialog-centered modal-xl modal-view">
   adfdsfasd
   <app-email-composer
-    class="modal-dialog-centered modal-xl modal-view"
     [endFunction]="emailModalRef.hide"
     [toEmails$]="modalService.config.initialState.toEmails$"
     [ccEmails$]="modalService.config.initialState.ccEmails$">

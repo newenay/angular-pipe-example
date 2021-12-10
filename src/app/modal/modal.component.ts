@@ -1,5 +1,5 @@
 
-  import { Component,TemplateRef, OnInit } from '@angular/core';
+  import { Component, TemplateRef, OnInit} from '@angular/core';
   import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
   // import {Observable} from 'rxjs';
 
@@ -12,11 +12,14 @@
 })
 export class ModalComponent implements OnInit {
     name = 'Modal (Bootstrap)';
+
+    /* @ViewChild('emailComponent') 
+    modalTemplate: TemplateRef<any>*/
     modalRef = new BsModalRef;
-    //modalRef: BsModalRef<any>;
+
     //subscriptions: Subscription[] = [];
     
-    constructor(public modalService: BsModalService) {}
+    constructor(public modalService: BsModalService ) {}
    
     ngOnInit() {
       this.modalService.onHide.subscribe((e) => {
@@ -24,9 +27,9 @@ export class ModalComponent implements OnInit {
       });
     }
   
-    openModal(template: TemplateRef<any>) {
+    openModal(modalTemplate: TemplateRef<any>): void {
       const user = { id: 10 };
-      this.modalRef = this.modalService.show(template, {
+      this.modalRef = this.modalService.show(modalTemplate, {
         initialState : user
       });
     }

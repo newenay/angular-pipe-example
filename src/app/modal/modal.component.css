@@ -1,36 +1,15 @@
-/* div.header-container{
-  position: relative;
-}
-
-div.button-container{
-  position: absolute;
-  right: 0px;
-  bottom: 0px;
-}
-
-button.submit , button.save{
-  position: relative;
-  bottom: 0px;
-  margin: 5px;
-  margin-bottom: 0;
-}
-
-.tab-pane{
-  height: 82.5vh;
-  overflow-y: auto;
-} */
-
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .modal-xl {
     width: 90%;
    max-width:1200px;
   }
-}
+} */
 
 /* New */
 .modal-view{
   position:relative;
-  width:inherit;
-  height: 95vh !important;
-  background-color: green;
+  /* width:inherit; */
+  width: 600px;
+  height: 45vh !important;
+  background-color: blue;
 }

@@ -2,21 +2,18 @@
     <div>
         <h4>{{ name }}</h4>
         <p>
-        <button type="button" class="btn btn-primary" (click)="openModal(template)">Create template modal</button>
+        <button type="button" class="btn btn-primary" (click)="openModal(emailComponent)">Create template modal</button>
         </p>
 
-        <ng-template #template class="modal-dialog modal-xl">
-            <app-email 
-                name="{{ name }}"  
-            >
-            <!-- modalRef = {{modalRef}} 
-                initialState = {{modalService.config.initialState}} -->
+        <ng-template #emailComponent>
+            <app-email name="{{ name }}" class="modal-dialog-centered modal-xl modal-view">
             </app-email>
         </ng-template>
 
 
         <!-- TODO: Get this inside the Email Component
-            
+            https://mdbootstrap.com/docs/b5/angular/components/modal/
+
             <ng-template #template>
             <div class="modal-header">
               <h4 class="modal-title pull-left">Modal for user id : {{ modalService.config.initialState.id }}</h4>

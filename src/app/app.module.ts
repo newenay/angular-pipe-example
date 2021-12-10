@@ -28,7 +28,6 @@ import { EmailComponent } from './shared/email/email.component';
     AsyncpipeComponent,
     PromiseComponent,
     ModalComponent,
-    /* HelloComponent, */
     EmailComponent
   ],
   imports: [
@@ -41,7 +40,7 @@ import { EmailComponent } from './shared/email/email.component';
     //SharedPublicModule
   ],
   providers: [],
-  entryComponents: [EmailComponent],
+/*   entryComponents: [EmailComponent], */
   bootstrap: [AppComponent]
 })
 export class AppModule { }
