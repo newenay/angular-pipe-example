@@ -1,0 +1,29 @@
+/* div.header-container{
+  position: relative;
+}
+
+div.button-container{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+button.submit , button.save{
+  position: relative;
+  bottom: 0px;
+  margin: 5px;
+  margin-bottom: 0;
+}
+
+.tab-pane{
+  height: 82.5vh;
+  overflow-y: auto;
+} */
+
+/* New */
+.modal-view{
+  position:relative;
+  width:inherit;
+  height: 95vh !important;
+  background-color: green;
+}

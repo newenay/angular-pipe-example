@@ -1,0 +1,26 @@
+<div class="card">
+    <div>
+        <h4>{{ name }}</h4>
+        <p>
+        <button type="button" class="btn btn-primary" (click)="openModal(template)">Create template modal</button>
+        </p>
+
+        <ng-template #template class="modal-dialog-centered modal-xl modal-view">
+            <modalTemplate name="{{ name }}">
+            </modalTemplate>
+            
+            <div class="modal-header">
+                <!-- https://stackoverflow.com/questions/48667781/how-pass-data-from-modalservice-into-component -->
+                <h4 class="modal-title pull-left">Broken User: {{ modalService.config.initialState }}</h4>
+                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                This is a mostly working modal.
+            </div>
+        </ng-template>
+
+        
+    </div>
+</div>
