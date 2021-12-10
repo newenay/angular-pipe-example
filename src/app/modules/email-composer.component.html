@@ -1,0 +1,148 @@
+<div id="email-composer-wrapper" class="d-block">
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <h3 class='m-2 mt-3'>New Email</h3>
+  <hr class='bg-light'>
+
+  <div>
+      <app-email-typeahead
+        id="toTypeahead"
+        displayKey="name"
+        searchLabel="*To"
+        [allowNew]="true"
+        (resultSelected)="onResultSelected($event, 'to')"
+        (itemCreated)="onItemCreated($event, 'to')"
+        (itemsCreated)="onItemsCreated($event, 'to')">
+      </app-email-typeahead>
+
+      <div class="d-flex flex-row flex-wrap">
+        <div *ngFor="let emailObject of toEmailObjects; let i = index" class="chip bg-primary">
+          {{emailObject.name}}
+          <i id="to" class="fa fa-times-circle" (click)="removeChip($event, i)"></i>
+        </div>
+      </div>
+  </div>
+
+  <div>
+    <app-email-typeahead
+      id="ccTypeahead"
+      displayKey="name"
+      searchLabel="Cc"
+      [allowNew]="true"
+      (resultSelected)="onResultSelected($event, 'cc')"
+      (itemCreated)="onItemCreated($event, 'cc')"
+      (itemsCreated)="onItemsCreated($event, 'cc')">
+    </app-email-typeahead>
+
+    <div class="d-flex flex-row flex-wrap">
+      <div *ngFor="let emailObject of ccEmailObjects; let i = index" class="chip bg-primary">
+        {{emailObject.name}}
+        <i id="cc" class="fa fa-times-circle" (click)="removeChip($event, i)"></i>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <form id='email-composer-form'
+    class='m-2'
+    novalidate
+    [formGroup]='emailForm'>
+      <div class='form-group form-inline'>
+        <div class='d-flex w-100'>
+
+          <div class='align-self-start mt-2 mr-3'>
+            <label #subject for='subject'>
+              *Subject
+            </label>
+          </div>
+
+          <div class='flex-grow-1'>
+            <input id='subject'
+              #subjectInput
+              name='subject'
+              type='text'
+              class='form-control w-100'
+              [formControl]="subjectControl"
+              [ngClass]="{'is-invalid': (subjectControl.touched && subjectControl.value.length === 0) && !subjectControl.valid }" />
+            <span
+              class='invalid-feedback'
+              *ngIf="subjectControl.errors?.required || subjectControl.errors?.whitespace">
+              Email must have a subject
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+      <hr class='bg-light'>
+
+      <div class='form-group'>
+        <label #body for='body' class='mr-3'>
+          *Body
+        </label>
+        <textarea id='body'
+          name='body'
+          class='form-control flex-grow-1'
+          rows='8'
+          [formControl]="bodyControl"
+          [ngClass]="{'is-invalid': (bodyControl.touched && bodyControl.value.length === 0) && !bodyControl.valid }">
+        </textarea>
+        <span
+          class='invalid-feedback'
+          *ngIf="bodyControl.errors?.required || bodyControl.errors?.whitespace">
+          Email must have a body
+        </span>
+      </div>
+
+      <accordion [isAnimated]="true">
+        <accordion-group #accordionGroupRef>
+          <!-- Header -->
+          <p class="m-0" accordion-heading>
+            <fa-icon
+              [icon]="iconAttachment"
+              class="ng-fa-icon"
+            ></fa-icon>
+            Add attachments
+
+            <span class="float-right">
+              <fa-icon *ngIf="accordionGroupRef.isOpen"
+                [icon]="iconUp"
+                class="ng-fa-icon"
+              ></fa-icon>
+              <fa-icon *ngIf="!accordionGroupRef.isOpen"
+                [icon]="iconDown"
+                class="ng-fa-icon"
+              ></fa-icon>
+            </span>
+          </p>
+
+          <div id="reset-word-wrap">
+            <app-attachments-table></app-attachments-table>
+          </div>
+
+          </accordion-group>
+      </accordion>
+
+      <!-- <div class='form-group'>
+        <label #subject for='subject' class='mr-3'>
+          Draft
+        </label>
+        <input class="m-auto"
+          type="checkbox"
+          [value]="draftControl.value"
+          (click)="onDraftCheckChange($event)"
+          id="isDraft">
+      </div> -->
+
+      <div class='d-flex flex-row-reverse mt-3'>
+        <button type='submit' class='btn save btn-primary' (click)='onSend()'>
+          {{saveText}}
+        </button>
+        <button type='button' class='btn btn-secondary' (click)='onCancel()'>
+          Cancel
+        </button>
+      </div>
+
+    </form>
+  </div>
+
+</div>

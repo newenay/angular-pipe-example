@@ -1,0 +1,35 @@
+@import "~src/sass/vars";
+
+#email-composer-wrapper {
+    padding: 0 $grid-spacing;
+    background-color: red;
+}
+
+.label {
+  min-width: min-content;
+}
+
+.custom-file-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#reset-word-wrap {
+  word-wrap: normal;
+}
+
+tag-input {
+  border-radius: 0.25rem;
+}
+
+::ng-deep tag-input .ng2-tag-input.bootstrap {
+  padding: 0.1rem;
+}
+
+.chip {
+  margin: 0.313rem;
+  padding: 0.313rem;
+  float: left;
+  border-radius: 0.25rem;
+}
