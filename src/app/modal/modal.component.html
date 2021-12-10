@@ -5,22 +5,27 @@
         <button type="button" class="btn btn-primary" (click)="openModal(template)">Create template modal</button>
         </p>
 
-        <ng-template #template class="modal-dialog-centered modal-xl modal-view">
-            <modalTemplate name="{{ name }}">
-            </modalTemplate>
-            
-            <div class="modal-header">
-                <!-- https://stackoverflow.com/questions/48667781/how-pass-data-from-modalservice-into-component -->
-                <h4 class="modal-title pull-left">Broken User: {{ modalService.config.initialState }}</h4>
-                <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                This is a mostly working modal.
-            </div>
+        <ng-template #template class="modal-dialog modal-xl">
+            <app-email 
+                name="{{ name }}"  
+            >
+            <!-- modalRef = {{modalRef}} 
+                initialState = {{modalService.config.initialState}} -->
+            </app-email>
         </ng-template>
 
-        
-    </div>
+
+        <!-- TODO: Get this inside the Email Component
+            
+            <ng-template #template>
+            <div class="modal-header">
+              <h4 class="modal-title pull-left">Modal for user id : {{ modalService.config.initialState.id }}</h4>
+              <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              This is a modal.
+            </div>
+        </ng-template> -->
 </div>

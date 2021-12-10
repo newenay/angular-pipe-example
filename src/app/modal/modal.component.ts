@@ -13,7 +13,6 @@
 export class ModalComponent implements OnInit {
     name = 'Modal (Bootstrap)';
     modalRef = new BsModalRef;
-    // modalService = BsModalService;
     //modalRef: BsModalRef<any>;
     //subscriptions: Subscription[] = [];
     

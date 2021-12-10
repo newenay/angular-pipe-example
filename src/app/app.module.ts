@@ -13,8 +13,9 @@ import { PromiseComponent } from './promise/promise.component';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ModalComponent } from './modal/modal.component';
-import { HelloComponent } from "./modal/hello.component";
+/* import { HelloComponent } from "./modal/hello.component"; */
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { EmailComponent } from './shared/email/email.component';
 
 // Supposedly it must still be imported by the child so that it will work on the grandchild??
 // import { SharedPublicModule } from './shared/...';
@@ -27,7 +28,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     AsyncpipeComponent,
     PromiseComponent,
     ModalComponent,
-    HelloComponent
+    /* HelloComponent, */
+    EmailComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,7 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     //SharedPublicModule
   ],
   providers: [],
-  entryComponents: [HelloComponent],
+  entryComponents: [EmailComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
