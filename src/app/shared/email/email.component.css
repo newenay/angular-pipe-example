@@ -1,13 +1,14 @@
 #email-composer-wrapper {
-  padding: 0;
-  background-color: red;
+  padding: 10px;
+  text-align: center;
+  background-color: rgba(252, 0, 0, 0.5);
 }
 
 .modal-content {
   /* content --
   add header, body, footer
   */
-  background-color:green;
+  background-color: rgba(8, 252, 0, 0.5);
 }
 
 

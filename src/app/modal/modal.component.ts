@@ -1,7 +1,6 @@
 
   import { Component, TemplateRef, OnInit} from '@angular/core';
   import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
-  // import {Observable} from 'rxjs';
 
   // https://stackblitz.com/edit/angular-modal-bootstap?file=index.html
 
@@ -19,7 +18,7 @@ export class ModalComponent implements OnInit {
 
     //subscriptions: Subscription[] = [];
     
-    constructor(public modalService: BsModalService ) {}
+    constructor(public modalService: BsModalService) {}
    
     ngOnInit() {
       this.modalService.onHide.subscribe((e) => {

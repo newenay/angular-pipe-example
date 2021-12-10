@@ -2,11 +2,11 @@
     <div>
         <h4>{{ name }}</h4>
         <p>
-        <button type="button" class="btn btn-primary" (click)="openModal(emailComponent)">Create template modal</button>
+        <button type="button" class="btn btn-primary" (click)="openModal(emailComponent)"> Create template modal</button>
         </p>
 
         <ng-template #emailComponent>
-            <app-email name="{{ name }}" class="modal-dialog-centered modal-xl modal-view">
+            <app-email name="{{ name }}" class="modal-view">
             </app-email>
         </ng-template>
 

@@ -1,15 +1,16 @@
-/* @media (min-width: 768px) {
-  .modal-xl {
+@media (min-width: 768px) {
+  .modal.xl {
     width: 90%;
-   max-width:1200px;
+    max-width:1200px;
+    /* background: purple; */
   }
-} */
+}
 
 /* New */
 .modal-view{
   position:relative;
   /* width:inherit; */
-  width: 600px;
+  width: 800px;
   height: 45vh !important;
-  background-color: blue;
+  background-color: rgba(17, 0, 252, 0.5);
 }
