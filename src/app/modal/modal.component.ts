@@ -30,6 +30,7 @@ export class ModalComponent implements OnInit {
       const user = { id: 10 };
       this.modalRef = this.modalService.show(modalTemplate, {
         initialState : user
+        
       });
     }
   }

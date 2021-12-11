@@ -1,22 +1,9 @@
 #email-composer-wrapper {
-  padding: 10px;
-  text-align: center;
-  background-color: rgba(252, 0, 0, 0.5);
-  width: 90vh !important;
+  padding: 0;
+  background-color: rgba(252, 0, 0, 0.55);
+  /* width: 90vh !important; */
 }
 
 .modal-content {
-  /* content --
-  add header, body, footer
-  */
-  background-color: rgba(8, 252, 0, 0.5);
+  padding: 0;
 }
-
-
-/* @media (min-width: 768px) {
-  .modal-xl {
-    width: 90%;
-    max-width:1200px;
-  }
-}
- */

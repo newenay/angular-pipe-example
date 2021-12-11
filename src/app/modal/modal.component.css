@@ -1,23 +1,10 @@
-/*@media (min-width: 768px) {
-  .modal.xl {
-    width: 90%;
-    max-width:1200px;
-     background: purple; 
-  }
-}*/
-
-.modal .modal-dialog {
-  width: 90vh !important;
-}
-
-
-/* New */
 .modal-view {
-  position:relative;
-  width:inherit;
-  /* max-width: 1490px !important;
-  min-width: 971px !important;   
-  width: 95% !important; */
+  /* relative can also work here, but modal shrinks back to orig size */
+  position:absolute !important; 
+  left: 50% !important;
+  transform: translate(-50%, 0) !important;
+  
+  width: 100vh !important; 
   height: 85vh !important;
-  background-color: rgba(17, 0, 252, 0.5);
+  background-color: rgba(17, 0, 252, 0.75);
 }

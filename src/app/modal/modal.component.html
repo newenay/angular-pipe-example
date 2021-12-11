@@ -7,23 +7,11 @@
 
         <ng-template #emailComponent>
             <!-- Add class="modal-dialog to app-email gives a vertical stretch, but not width -->
-            <app-email name="{{ name }}" modalRef="{{ modalRef }}" class="modal-dialog modal-view">
+            <app-email name="{{ name }}" modalRef="{{ modalRef }}" class="modal-view">
             </app-email>
         </ng-template>
 
-
-        <!-- TODO: Get this inside the Email Component
+        <!-- TODO: Get functions to Email Component
             https://mdbootstrap.com/docs/b5/angular/components/modal/
-
-            <ng-template #template>
-            <div class="modal-header">
-              <h4 class="modal-title pull-left">Modal for user id : {{ modalService.config.initialState.id }}</h4>
-              <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              This is a modal.
-            </div>
-        </ng-template> -->
+         -->
 </div>
